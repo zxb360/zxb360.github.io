@@ -12,12 +12,17 @@ const BackgroundPerfil = styled.header`
 `
 const TitleText = {
   paragrath: styled.p`
+   font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
   font-size: 1 rem;
   color: white;
-  font-weight: 400;
   position: relative;
   top: 30%;
-  left: 13%;
+  left: 20%;
   width:30%;
 `, 
 titleH2: styled.h2`
@@ -26,7 +31,7 @@ titleH2: styled.h2`
   font-weight: 400;
   position: relative;
   top: 30%;
-  left: 13%;
+  left: 23%;
  
 `}
 
