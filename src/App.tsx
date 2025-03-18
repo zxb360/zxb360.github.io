@@ -1,8 +1,11 @@
-function App() {
+import Header from "./components/Header";
+import SectionIntro from "./components/SectionIntro";
 
+function App() {
   return (
     <>
-      <h1>portfólio de Jaeder</h1>      
+      <Header />
+      <SectionIntro />
     </>
   )
 }
