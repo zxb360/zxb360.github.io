@@ -1,63 +1,58 @@
 import styled from "styled-components";
 import '../index.css';
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const SectionH2 = {
-    subTitleH2: styled.h2`
+
+const StyleyText = {
+    titleH3: styled.h3`
     font-family: "Big Shoulders Inline", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: weight;
     font-style: normal;
-    font-size: 10rem;
-    padding: 0;
-    margin-bottom: 10px;
-    text-align: center;
-`,
-    subParagraph: styled.p`
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-    font-size: 1rem;
-    width: 40%;
-    margin: 0;
-`, 
-    divFlex: styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-`,
-    TextStrong: styled.strong`
-    font-weight: bold;
-    font-size: 1.5rem;
-`
-
+    font-size: 9rem;
+    color: white;
+    width: 100%;
+    max-width: 100px;
+    opacity: 0;
+    transform: translateX(-1000px);
+    `
 }
 
 export default function SectionIntro() {
+
+    useLayoutEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".section-skills", {
+            x: 350,
+            opacity: 1,
+            rotate: 360,
+            scrollTrigger: {
+                trigger: ".section-intro",
+                markers: true,
+                start: "top 100%",
+                end: "bottom 80%",
+                scrub: true,
+            }
+        })
+
+        return () => {
+            gsap.killTweensOf(".section-skills");
+        }
+    }, []);
+
   return (
     <>
         <section className="section-intro">
-            <SectionH2.subTitleH2>Education</SectionH2.subTitleH2>
-            <SectionH2.subTitleH2>2018 - 2021</SectionH2.subTitleH2>
-        </section>
-        <SectionH2.divFlex>
-            <SectionH2.subParagraph>
-                A formação em Análise e Desenvolvimento de Sistemas na Estácio FIB
-                me proporcionou uma base sólida em programação, banco de dados,
-                engenharia de software e outras áreas essenciais da TI.
-                Através de projetos práticos e desafios reais, 
-                desenvolvi habilidades técnicas e analíticas que me capacitam a criar 
-                soluções inovadoras e eficientes. Acredito que a combinação 
-                entre teoria e prática, aliada à qualidade do ensino da Estácio FIB, 
-                me tornou um profissional completo e preparado para os desafios do mercado.
-            </SectionH2.subParagraph>
-            <div>
-                <SectionH2.subParagraph><SectionH2.TextStrong>Faculdade:</SectionH2.TextStrong> Estacio.</SectionH2.subParagraph>
-                <SectionH2.subParagraph><SectionH2.TextStrong>Curso:</SectionH2.TextStrong> Análise e Desenvolvimento de Sistemas.</SectionH2.subParagraph> 
+            <StyleyText.titleH3 className="section-skills">SKILLS and PROJECT</StyleyText.titleH3>
+            <div className="models-itens">
+                <section className="model-1 skill-react">
+                </section>
+                <section className="model-2 skill-node">
+                </section>
             </div>
-        </SectionH2.divFlex>
+        </section>
     </>
   )
 }
