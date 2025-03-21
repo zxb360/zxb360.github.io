@@ -21,8 +21,8 @@ const TitleText = {
   font-size: 1 rem;
   color: white;
   position: relative;
-  top: 30%;
-  left: 20%;
+  top: 20%;
+  left: 16%;
   width:30%;
 `, 
 titleH2: styled.h2`
@@ -30,7 +30,7 @@ titleH2: styled.h2`
   color: white;
   font-weight: 400;
   position: relative;
-  top: 30%;
+  top: 16%;
   left: 23%;
  
 `}
