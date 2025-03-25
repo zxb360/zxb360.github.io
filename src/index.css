@@ -1,6 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -10,53 +13,9 @@
   text-rendering: optimizeLegibility;
 }
 
-.main {
+* {
   margin: 0;
   padding: 0;
-}
-
-.navegation {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 15px;
-}
-
-.navegation button {
-  border-radius: 5px;
-  padding: 15px;
-  color: white;
-  background-color: rgb(92, 92, 211);
-}
-
-.section-skills {
-  font-family: "Big Shoulders Inline", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-size: 9rem;
-  color: white;
-  width: 100%;
-  max-width: 100px;
-  opacity: 0;
-  transform: translateX(-1000px);
-}
-
-.section-intro {
-  width: 100%;
-  margin-top: 250px;
-}
-
-.item {
-  min-width: 200px;
-  height: 190px;
-  background: tomato;
-  margin-right: 20px;
-  line-height: 190px;
-  gap: 20px;
-  text-align: center;
-  font-size: 24px;
-  color: white;
 }
 
 

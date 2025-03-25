@@ -1,115 +1,127 @@
 import styled from "styled-components";
 import '../index.css';
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectNunes from "./ProjectNunes";
+import ProjectStarWars from "./ProjectStarWars";
+import ImagePerfil from "../assets/perfil-lego.png";
 
+// import { useLayoutEffect } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const StyleyText = {
-    titleH3: styled.h3`
-    font-family: "Big Shoulders Inline", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 9rem;
-    color: white;
+const Section = styled.section`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
-    margin-bottom: 250px;
-    max-width: 100px;
-    opacity: 0;
-    transform: translateX(-1000px);
-    `,
-}
+    margin-top: 5rem;
+    text-align: justify;
+
+    div {
+        padding: 3rem;
+    }
+
+    .section-social h3 {
+        text-align: justify;
+        color: green;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style: none;
+        padding-top: 1rem;
+        margin: 0;
+        font-size: 23px;
+        color: green;
+    }
+
+    li {
+        padding: 1rem;
+        margin: 0;
+    }
+`;
+
+// const rotate = keyframes`
+//     from {
+//         transform: rotate(0deg);
+//     }
+//     to {
+//     transform: rotate(360deg);
+//     } 
+// `
+
+// const Rotate = styled.div`
+//     display: inline-block;
+//     font-size: 2rem;
+//     animation: ${rotate} 8s linear infinite;
+//     padding: 1.2rem;
+//     `
 
 export default function SectionIntro() {
-    const elementsRef = useRef();
 
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to(".section-skills", {
-            x: 350,
-            opacity: 1,
-            rotate: 360,
-            scrollTrigger: {
-                trigger: ".section-title",
-                markers: true,
-                start: "top 90%",
-                end: "bottom 60%",
-                scrub: true,
-            }
-        })
+    // useLayoutEffect(() => {
+    //     gsap.registerPlugin(ScrollTrigger);
+    //     gsap.to(".section-skills", {
+    //         x: 350,
+    //         opacity: 1,
+    //         rotate: 360,
+    //         scrollTrigger: {
+    //             trigger: ".section-intro",
+    //             markers: true,
+    //             start: "top 100%",
+    //             end: "bottom 80%",
+    //             scrub: true,
+    //         }
+    //     })
 
-        return () => {
-            gsap.killTweensOf(".section-skills");
-        }
-    }, []);
-
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to(elementsRef, {
-            x: "50vw",
-            ease: "none",
-            scrollTrigger: {
-                trigger: elementsRef.current,
-                markers: true,
-                start: "top 90%",
-                end: "bottom 60%",
-                scrub: true,
-            }
-        })
-        // const ctx = gsap.context(() => {
-        //     timeLineRef.current = gsap.timeline({
-        //         scrollTrigger: {
-        //             trigger: ".skill-item",
-        //             markers: true,
-        //             start: "top 90%",
-        //             end: "bottom 60%",
-        //             scrub: true,
-        //         }
-        //     }).fromTo(
-        //         ".model-1",
-        //         {
-        //             x: -1000,
-        //             opacity: 0
-        //         },
-        //         {
-        //             x: 700,
-        //             opacity: 1,
-        //             duration: 1
-        //         }
-        //     )
-        // }, elementsRef);
-
-        return () => {
-            gsap.killTweensOf(".skill-item");
-        }
-    }, []);
+    //     return () => {
+    //         gsap.killTweensOf(".section-skills");
+    //     }
+    // }, []);
 
   return (
     <>
-        <section className="section-intro">
-            <div className="section-title">
-                <StyleyText.titleH3 className="section-skills">PROJECT</StyleyText.titleH3>
-            </div>
-            <div className="models-itens">
-                <div className="model-1 skill-item" ref={elementsRef.current}>
+        <Section>
+            <div>
+                <h2 style={{ fontSize: 40, color: "green" }}> 
+                    Sobre Jaeder Azevedo
+                </h2>
+                <h2 style={{ fontSize: 23, color: "green" }}>
+                👋 Olá, eu sou Jaeder Azevedo!
+                </h2>
+                <br />
+                <p>
+                💻 Desenvolvedor Full-Stack | Apaixonado por Tecnologia e Inovação
+                Formado em Análise e Desenvolvimento de Sistemas pela Estácio FIB, especializei-me em desenvolvimento full-stack pela Trybe, com foco em React, Node.js e TypeScript. Minha trajetória combina experiência prática e constante aprendizado — porque tecnologia nunca para, e eu também não.
+                </p>
+                <p>
+                🚀 O que me move?
+                Transformar ideias em código eficiente e impactante. Seja criando aplicações web e mobile, explorando IA generativa, otimizando performance ou implementando testes automatizados, meu objetivo é sempre entregar soluções inovadoras e funcionais.
+                </p>
+                <p>
+                📚 Sempre aprendendo!
+                Recentemente, concluí um curso de Introdução ao UX/UI pelo Google e sigo aprimorando minhas habilidades com certificações em UX, Java e CSS/Sass.
+                </p>
+                <p>
+                🔎 Busco desafios que impulsionem a tecnologia e criem valor para empresas e pessoas. Se você quer construir algo incrível, vamos conversar! 🚀
+                </p>
+                <div className="section-social">
+                    <h3 style={{ fontSize: 40 }}>REDES SOCIAIS</h3>
                     <ul>
-                        <li className="item">J</li>
-                        <li className="item">A</li>
-                        <li className="item">V</li> 
-                        <li className="item">A</li>
-                        <li className="item">S</li>
-                        <li className="item">C</li>
-                        <li className="item">R</li>
-                        <li className="item">I</li>
-                        <li className="item">P</li>
-                        <li className="item">T</li>
+                        <li>_INSTAGRAM</li>
+                        <li>_FACEBOOK</li>
+                        <li>_GITHUB</li>
+                        <li>_X</li>
                     </ul>
                 </div>
-                <section className="model-2 skill-item">
-                </section>
             </div>
-        </section>
+            <div>
+                <img src={ ImagePerfil } alt="jaeder" />
+            </div>
+        </Section>
+        <ProjectNunes />
+        <ProjectStarWars />
     </>
   )
 }
