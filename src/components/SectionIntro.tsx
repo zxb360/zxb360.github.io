@@ -1,58 +1,29 @@
 import styled from "styled-components";
 import '../index.css';
-import { useLayoutEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import spaceStarWars from '../../public/espaco.jpg'
+import ProjectStarWars from "../page/ProjectStarWars";
 
-
-const StyleyText = {
-    titleH3: styled.h3`
-    font-family: "Big Shoulders Inline", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-size: 9rem;
-    color: white;
-    width: 100%;
-    max-width: 100px;
-    opacity: 0;
-    transform: translateX(-1000px);
-    `
-}
+const Section = styled.section`
+  background-image: url(${spaceStarWars});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+`
+const H1 = styled.h1`
+  margin: 0;
+  padding: 30rem 0 50rem 0;
+  text-align: center;
+  font-size: 100pt;
+`
 
 export default function SectionIntro() {
-
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.to(".section-skills", {
-            x: 350,
-            opacity: 1,
-            rotate: 360,
-            scrollTrigger: {
-                trigger: ".section-intro",
-                markers: true,
-                start: "top 100%",
-                end: "bottom 80%",
-                scrub: true,
-            }
-        })
-
-        return () => {
-            gsap.killTweensOf(".section-skills");
-        }
-    }, []);
-
   return (
     <>
-        <section className="section-intro">
-            <StyleyText.titleH3 className="section-skills">SKILLS and PROJECT</StyleyText.titleH3>
-            <div className="models-itens">
-                <section className="model-1 skill-react">
-                </section>
-                <section className="model-2 skill-node">
-                </section>
-            </div>
-        </section>
+      <Section>
+          <H1>Em uma galaxia muito, muito distante...</H1>
+          <ProjectStarWars />
+      </Section>
     </>
   )
 }

@@ -10,8 +10,7 @@ const BackgroundPerfil = styled.header`
   height: 90vh;
   color: #000
 `
-const TitleText = {
-  paragrath: styled.p`
+const Paragraph = styled.p`
    font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -24,26 +23,14 @@ const TitleText = {
   top: 30%;
   left: 20%;
   width:30%;
-`, 
-titleH2: styled.h2`
-  font-size: 1.3rem;
-  color: white;
-  font-weight: 400;
-  position: relative;
-  top: 30%;
-  left: 23%;
- 
-`}
+`
 
 function Header() {
   return (
     <div>
         <Navega />
         <BackgroundPerfil>
-          <TitleText.titleH2>
-            Sobre Jaeder Azevedo
-          </TitleText.titleH2>
-          <TitleText.paragrath>
+          <Paragraph>
               👋 Olá, eu sou Jaeder Azevedo!
               <br />
               💻 Desenvolvedor Full-Stack | Apaixonado por Tecnologia e Inovação
@@ -57,7 +44,7 @@ function Header() {
               Recentemente, concluí um curso de Introdução ao UX/UI pelo Google e sigo aprimorando minhas habilidades com certificações em UX, Java e CSS/Sass.
               <br  />
               🔎 Busco desafios que impulsionem a tecnologia e criem valor para empresas e pessoas. Se você quer construir algo incrível, vamos conversar! 🚀
-          </TitleText.paragrath>
+          </Paragraph>
         </BackgroundPerfil>
     </div>
   )
