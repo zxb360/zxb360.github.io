@@ -13,3 +13,11 @@ export default interface Planets {
     edited: string;
     url: string;
 }
+
+export interface FilterDropdown {
+    column: string;
+    comparison: string;
+    value: number | string;
+}
+
+export type Comparison = 'Maior' | 'Menor' | 'Igual';
