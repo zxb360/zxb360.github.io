@@ -12,7 +12,7 @@ const Section = styled.section`
 `
 const H1 = styled.h1`
   margin: 0;
-  padding: 30rem 0 50rem 0;
+  padding: 50rem 0 70rem 0;
   text-align: center;
   font-size: 100pt;
 `
@@ -22,6 +22,8 @@ export default function SectionIntro() {
     <>
       <Section>
           <H1>Em uma galaxia muito, muito distante...</H1>
+      </Section>
+      <Section>
           <ProjectStarWars />
       </Section>
     </>
