@@ -11,7 +11,7 @@ const BackgroundPerfil = styled.header`
   color: #000
 `
 const Paragraph = styled.p`
-   font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
