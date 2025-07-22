@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Navega from "../components/Navega";
-import fotoJaeder from "../assets/perfil_Jaeder.jpg"; // Certifique-se de que o caminho da imagem está correto
+import fotoJaeder from "../../public/perfil_Jaeder.jpg"; // Certifique-se de que o caminho da imagem está correto
 import '../index.css'; // Mantenha seu CSS global
 
 const Header = styled.header`

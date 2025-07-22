@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 
-import bgImage from "../assets/final_image_ziza.png";
+import bgImage from "../../public/final_image_ziza.png";
 import Navega from "./Navega";
 
 const BackgroundPerfil = styled.header`
