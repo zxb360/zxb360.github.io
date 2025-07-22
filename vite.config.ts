@@ -5,14 +5,14 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/',
   plugins: [react(),
-    {
-      name: 'adjust-paths',
-      enforce: 'post',
-      apply: 'build',
-      transformIndexHtml(html) {
-        return html.replace(/src="\//g, 'src="')
-                   .replace(/href="\//g, 'href="')
-      }
-    }
+    // {
+    //   name: 'adjust-paths',
+    //   enforce: 'post',
+    //   apply: 'build',
+    //   transformIndexHtml(html) {
+    //     return html.replace(/src="\//g, 'src="')
+    //                .replace(/href="\//g, 'href="')
+    //   }
+    // }
   ],
 })
