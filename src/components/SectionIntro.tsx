@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import '../index.css';
-import spaceStarWars from '../assets/espaco.jpg';
-import starDestroyer from '../assets/essesemfundo.png';
+import spaceStarWars from '../../public/espaco.jpg';
+import starDestroyer from '../../public/essesemfundo.png';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import logoReact from '../assets/react.svg';
-import logoJest from '../assets/jest.png';
-import logoTypescript from '../assets/typescript.png';
-import logoVite from '../assets/vite.svg';
+import logoReact from '../../public/react.svg';
+import logoJest from '../../public/jest.png';
+import logoTypescript from '../../public/typescript.png';
+import logoVite from '../../public/vite.svg';
 import { useEffect, useRef } from "react";
 import ProjectStarWars from "../project/ProjectStarWars";
 
