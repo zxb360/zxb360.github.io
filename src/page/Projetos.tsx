@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Navega from "../components/Navega"
-import SectionIntro from "../components/SectionIntro"
+import SectionIntro from "../components/Main"
 import '../index.css';
 
 export default function Projetos() {
