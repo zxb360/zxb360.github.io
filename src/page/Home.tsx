@@ -4,8 +4,6 @@ export default function Home() {
   return (
     <>
         <Header />
-        <h3> Teste numero um</h3>
-           
     </>
   )
 }

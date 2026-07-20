@@ -1,0 +1,66 @@
+import Cards from "./Cards";
+import { projetos } from '../data/projetosCards';
+// import CardsSociais from "./CardsSociais";
+import { FaInstagram, FaGithub, FaLinkedin, FaTwitter, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+
+
+export default function Navega() {
+  return (
+    <>
+      <nav className="flex justify-start gap-2 m-2">
+        <div className="flex flex-col border-2 border-black rounded-lg p-4 w-100 bg-zinc-800">
+          <h3>SOBRE...</h3>
+          <p className="indent-4">Meu nome é Jaeder, acredito ser uma pessoa legal, social, esforçada, além de curiosa. 
+            Estou sempre em busca de evolução e acredito nas pessoas, pois procuro aprender e crescer diante de cada desafio.</p>
+          <p className="indent-4">Gosto de transformar ideias em realidade, desenvolver soluções para agregar a sociedade. 
+            Criar, aprender são motivações que fazem sentido durante o percurso da vida.</p>
+          <p className="indent-4">Também valorizo os momentos simples como minha família e esposa, meus pais, irmãos e sobrinhos.</p>
+          <p className="indent-4">Busco evoluir tanto na vida pessoal quanto profissional, aprendizado contínuo para construir 
+            soluções que possam fazer a diferença.</p>
+        </div>
+        <div className="flex gap-2">
+          {
+            projetos.map((projeto) => (
+              <Cards
+              key={projeto.id}
+              title={projeto.title}
+              subtitulo={projeto.subtitulo}
+              // paragrafo={projeto.paragrafo}
+              link={projeto.link}
+              github={projeto.github}
+              imagem={projeto.imagem}
+              />
+            )
+          )
+        }
+        </div>
+        <div className="flex flex-wrap gap-2 justify-center w-150 h-72">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaInstagram color="#E1306C" size={60} />
+          </a>
+          <a href="https://github.com/zxb360" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaGithub color="#000000" size={60} />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaLinkedin color="#0A66C2" size={60} />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaTwitter color="#1DA1F2" size={60} />
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaWhatsapp color="#25D366" size={60} />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" 
+            className="flex justify-center items-center border-2 border-black rounded-lg p-2 w-20 h-20 bg-zinc-800">
+            <FaYoutube color="#FF0000" size={60} />
+          </a>
+        </div>
+      </nav>
+    </>
+  )
+}
