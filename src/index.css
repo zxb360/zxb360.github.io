@@ -6,17 +6,37 @@
   font-weight: 500;
   font-style: normal;
   font-variation-settings: "width" 100;
-  font-size: 1 rem;
-  /* src/components/nav-bar/nav-bar.css */
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #383434;
+  font-size: 1rem;
+  --bg-color: #f8fafc;
+  --text-color: #000000;
+  --surface-color: #ffffff;
+  --surface-alt-color: #e2e8f0;
 }
 
+:root.light {
+  --bg-color: #f8fafc;
+  --text-color: #000000;
+  --surface-color: #ffffff;
+  --surface-alt-color: #ffffff;
+}
+
+:root.dark {
+  --bg-color: #000000;
+  --text-color: #f8fafc;
+  --surface-color: #292525;
+  --surface-alt-color: #000000;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
 
 .main {
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: auto;
   height: auto;
 }
-

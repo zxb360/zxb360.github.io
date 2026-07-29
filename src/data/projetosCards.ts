@@ -13,7 +13,7 @@ export const projetos = [
         subtitulo: "PROJETO PORTFOLIO DE INSTITUIÇÂO DE CARIDADE.",
         link: "https://apoiohospitalar.netlify.app/",
         github: "https://github.com/zxb360/projeto-social-instituicao-apoio",
-        imagem: "/clima-agora.png"
+        imagem: "/logo_apoio_hospitalar.png"
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const projetos = [
         subtitulo: "PROJETO FINANÇAS COM INTEGRAÇÃO INTELIGÊNCIA ARTIFICIAL",
         link: "https://projeto-financa-dio-1.onrender.com",
         github: "https://github.com/zxb360/projeto-financa-dio",
-        imagem: "/finCoachAi.jpeg",
+        imagem: "/finCoachAI.jpeg",
     },
     {
         id: 4,
@@ -29,5 +29,6 @@ export const projetos = [
         subtitulo: "PROJETO RELACIONADO A FINANÇAS COM INTEGRAÇÃO INTELIGÊNCIA ARTIFICIAL",
         link: "https://fincoach-ai-backend.onrender.com",
         github: "https://github.com/zxb360/FinCoach-AI-backend",
+        imagem: "/finCoachAI.jpeg",
     }
 ]
