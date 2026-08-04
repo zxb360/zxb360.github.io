@@ -39,7 +39,8 @@ export default function Navega() {
               that can make a difference.            </p>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <img className="h-56 w-full rounded-3xl object-cover sm:h-auto sm:min-h-60 sm:w-60 sm:rounded-4xl" src="./final_image_ziza.png" alt="jaeder lego" />
+            <img className="h-56 w-full rounded-3xl object-cover sm:h-auto sm:min-h-60 sm:w-60 sm:rounded-4xl" 
+              src="./jaederAI.jpeg" alt="jaeder" />
             <div className="min-w-0 flex-1 rounded-3xl border-2 border-black bg-[var(--surface-color)] text-[var(--text-color)] shadow-[8px_8px_0_rgba(0,0,0,0.25)] sm:rounded-4xl">
               <h3 className="pt-5 text-center text-xl font-bold sm:text-2xl">STACK</h3>
               <StackIcons />
